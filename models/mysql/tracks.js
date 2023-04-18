@@ -46,10 +46,10 @@ const Tracks = sequelize.define(
 Tracks.findAllData = function () {
   Tracks.belongsTo(Storage, {
     foreignKey: "mediaId",
-    as: "audio",
+    as: "audios",
   });
 
-  return Tracks.findAll({ include: "audio" });
+  return Tracks.findAll({ include: "audios" });
 };
 
 Tracks.findOneData = function (id) {
